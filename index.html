@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>My portfolio</title>
+</head>
+<body>
+    <!--header section-->
+    <div class="header">
+        <div class="head-logo">
+            <h1>SAHAYA<span>SUJITH</span>.S</h1>
+        </div>
+
+        <div class="nav-bar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+
+        <div class="head-contact">
+            <a href="#contact"><button class="contact_btn">Contact Me</button></a>
+        </div>
+    </div>
+
+    <!-- home sections -->
+     <section id="home" class="home">
+        <img src="SUJITH.jpg" alt="" width="450px" height="400px">
+        <div class="description">
+            <h1>Hi I'm <br> <span>Sahaya Sujith</span></h1>
+            <h2>I'm a <span> Web developer...</span></h2>
+            <p>I'm a Full-Stack Developer passionate about creating beautiful and user-friendly web experiences. I'm eager to learn new technologies.</p><br><br>
+            <div class="font">
+                <a href="https://www.instagram.com/sujith___.s/"><i class="bi bi-instagram"></i></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61576363892117"><i class="bi bi-facebook"></i></i></a>
+                <a href="https://www.linkedin.com/in/sahaya-sujith-s/"><i class="bi bi-linkedin"></i></i></a>
+                <a href="https://github.com/Sahayasujith"><i class="bi bi-github"></i></a>
+            </div><br><br>
+            <button><a href="sujithCV (1).pdf">Download CV</a></button>
+        </div>
+    </section>
+    <!-- about section -->
+    <section id="about" class="about">
+        <div class="about_section">
+            <h1>About <span>Me</span></h1>
+            <h2>Web <span>Developer!</span></h2>
+            <p>I'm Sahayasujith Full-Stack Developer, I enjoy taking complex problem and turning them into simple and beautiful interface design. I also love the logic and structure of coding and always strive to write elegent and efficent code whether it be HTML,CSS or JavaScript.</p><br>
+            <button class="about_btn" onclick="aboutmark()">Read More...</button>
+        </div>
+        <div class="about_photo">
+            <img src="SUJITH.jpg" alt="image" width="420px" height="360px">
+        </div>
+    </section>
+
+    <!-- service section -->
+    <section id="service" class="service">
+        <h2 class="service_section">My <span>Services</span></h2>
+        <div class="card">
+            <div class="service_card">
+                <i class="bi bi-laptop"></i>
+                <h2>Full-Stack Developer</h2>
+                <p>The art of composing visual elements is such as typography, images, colors, and shapes in to communicate information or convey a message effectively.</p>
+                <a href="#">Read More..</a>
+            </div>
+
+            <div class="service_card">
+                <i class="bi bi-cpu"></i>
+                <h2>UI/UX Design</h2>
+                <p>User Interface (UI) and User Experience (UX) Design play key roles in the experience users have when interacting with digital products and applications.</p>
+                <a href="#">Read More..</a>
+            </div>
+
+            <div class="service_card">
+                <i class="bi bi-tv"></i>
+                <h2>Frond-end Developer</h2>
+                <p>Front-end Development is the development or creation of a user interface using some markup languages and other tools. It is the development of the user side where only user interaction will be counted.</p>
+                <a href="#">Read More..</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section -->
+    <section id="portfolio">
+        <h1 class="port_section">My <span>work</span></h1>
+        <div class="project">
+            <div class="port_card">
+                <img src="furniture.jpg" alt="image" width="350px" height="350px">
+                <div class="content">
+                    <h1> Furniture Mart</h1>
+                    <p>A furniture website showcases various styles of furniture, allowing users to browse, compare, and purchase items for homes or offices with ease and convenience.</p>
+                </div>
+            </div>
+
+            <div class="port_card">
+                <img src="calculator.jpg" alt="image" width="350px" height="350px">
+                <div class="content">
+                    <h1>Money Calculator</h1>
+                    <p> A money calculator helps users manage finances by calculating expenses, savings, interest, loans, or budgets, making financial planning easier, faster, and more accurate online.</p>
+                </div>
+            </div>
+
+            <div class="port_card">
+                <img src="shoe.jpg" alt="image" width="350px" height="350px">
+                <div class="content">
+                    <h1> Onyx Shoes</h1>
+                    <p>A shoe website offers a wide range of footwear, letting users explore styles, compare prices, and purchase shoes online for casual, formal, or athletic use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section id="contact" class="contact-b">
+        <div class="form">
+            <h1>Contact <span> Me</span></h1>
+            <form action="#home">
+                <input type="text" name="name" placeholder="Enter your name" required><br>
+
+                <input type="email" name="email" placeholder="enter your email" required><br>
+
+                <input type="number" name="number" placeholder="Enter your number" required><br>
+
+                <textarea name="msg" id="msg" rows="6" cols="20" placeholder="Enter your message"></textarea><br>
+
+                <button class="form_btn" onclick="my()">Submit</button>
+            </form>
+        </div>
+    </section>
+
+     <div class="footer">
+        <p><i class="bi bi-c-circle"></i>sahayasujith $ All Rights Reserved...</p>
+     </div>
+</body>
+</html>
