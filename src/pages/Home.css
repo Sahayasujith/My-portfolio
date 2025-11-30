@@ -1,0 +1,622 @@
+/* -------------------------
+   HOME SECTION (Original Design)
+-------------------------- */
+.home-body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    background: #fff;
+}
+
+.home {
+  padding: 220px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.description h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.description h1 span {
+  color: darkviolet;
+  font-size: 55px;
+}
+
+.description h2 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  color: black;
+}
+
+.description h2 span {
+  color: darkviolet;
+  position: relative;
+}
+
+/* Typing animation */
+.description h2 span::after {
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0px;
+    height: 100%;
+    border-left:4px solid darkviolet;
+    background-color:rgb(255, 255, 255);
+    animation: text 3s infinite backwards steps(10)
+}
+
+@keyframes text {
+  0% { left: 0; }
+  50% { left: 100%; }
+  100% { left: 0; }
+}
+
+.description p {
+  width: 500px;
+  margin-top: 20px;
+  color: black;
+}
+
+.font {
+  margin-top: 30px;
+}
+
+.font a i {
+  margin: 25px 8px;
+  color: white;
+  background: darkviolet;
+  border-radius: 50%;
+  padding: 13px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+}
+
+.font a i:hover {
+  background: white;
+  color: darkviolet;
+  transform: translateY(-15px);
+  box-shadow: 0 0 15px darkviolet;
+  border: 2px solid darkviolet;
+}
+
+/* CV Button */
+.cv-btn {
+  background: darkviolet;
+  border-radius: 20px;
+  border: none;
+  margin-top: 30px;
+  height: 50px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.cv-btn:hover {
+  background: white;
+  border: 2px solid darkviolet;
+  box-shadow: 0 0 20px darkviolet;
+}
+
+.cv-btn a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.cv-btn:hover a {
+  color: darkviolet;
+}
+
+/* Image */
+.home img {
+  background: darkviolet;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px darkviolet;
+  filter: brightness(1.1);
+  transition: .4s ease-in-out;
+  animation: animate 2.5s ease-in-out infinite;
+}
+
+.home img:hover {
+  box-shadow: 0 0 50px darkviolet;
+}
+
+@keyframes animate {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* -------------------------
+   MOBILE RESPONSIVE (Your same design)
+-------------------------- */
+@media screen and (max-width: 600px) {
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 20px;
+    gap: 2rem;
+  }
+
+  .home img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .description {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .description h1 {
+    font-size: 24px;
+  }
+
+  .description h1 span {
+    font-size: 32px;
+  }
+
+  .description h2 {
+    font-size: 22px;
+  }
+
+  .description p {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .font a i {
+    font-size: 17px;
+  }
+
+  .cv-btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  .cv-btn a {
+    font-size: 14px;
+  }
+}
+
+/* ===========================
+        ABOUT SECTION
+=========================== */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 120px 60px;
+    color: black;
+    flex-wrap: wrap;
+    margin-top: -100px;
+}
+
+/* ----- IMAGE ----- */
+
+.about_photo img {
+    width: 380px;
+    height: 380px;
+    background-color: darkviolet;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px darkviolet;
+    filter: brightness(1.1);
+    animation: floatImg 2.5s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* ----- TEXT SECTION ----- */
+
+.about_section {
+    max-width: 550px;
+}
+
+.about_section h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.about_section h2 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.about_section span {
+    color: darkviolet;
+}
+
+.about_section p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+/* ----- BUTTON ----- */
+
+.about_btn {
+    margin-top: 20px;
+    padding: 13px 28px;
+    font-size: 20px;
+    background-color: darkviolet;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    box-shadow: 0 0 15px darkviolet;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.about_btn:hover {
+    background: white;
+    color: darkviolet;
+    border: 2px solid darkviolet;
+}
+
+/* ===========================
+        RESPONSIVE DESIGN
+=========================== */
+
+/* Tablets (medium screens) */
+@media (max-width: 992px) {
+    .about {
+        padding: 100px 40px;
+        text-align: center;
+    }
+
+    .about_photo img {
+        width: 330px;
+        height: 330px;
+    }
+
+    .about_section h1 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 20px;
+        flex-direction: column;
+    }
+
+    .about_photo img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about_section {
+        text-align: center;
+    }
+
+    .about_section h1 {
+        font-size: 34px;
+    }
+
+    .about_section h2 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+
+    .about_photo img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about_section h1 {
+        font-size: 28px;
+    }
+
+    .about_section h2 {
+        font-size: 18px;
+    }
+
+    .about_section p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .about_btn {
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 15px;
+    }
+}
+
+
+/* ============================
+        SERVICE SECTION
+============================ */
+
+.service {
+    width: 100%;
+    padding: 120px 0;
+    background: none;
+    margin-top: -50px;
+}
+
+h2.service_section {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2.service_section span {
+    color: darkviolet;
+}
+
+/* Service Cards Container */
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 40px;
+    color: black;
+}
+
+/* Single Card */
+.service_card {
+    background-color: lightgray;
+    width: 330px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.service_card:hover {
+    border: 2px solid darkviolet;
+    background-color: darkviolet;
+    transform: translateY(-10px);
+    color: #fff;
+}
+
+.service_card i {
+    font-size: 45px;
+    color: darkviolet;
+    transition: 0.3s ease;
+}
+
+.service_card:hover i {
+    color: white;
+}
+
+.service_card h2 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.service_card p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.service_card a {
+    font-size: 16px;
+    color: violet;
+    text-decoration: none;
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+============================ */
+
+/* Tablets - Medium Screens */
+@media (max-width: 992px) {
+    h2.service_section {
+        font-size: 38px;
+    }
+
+    .service_card {
+        width: 300px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+    .service {
+        padding: 80px 0;
+    }
+
+    h2.service_section {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 0 20px;
+    }
+
+    .service_card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    h2.service_section {
+        font-size: 26px;
+    }
+
+    .service_card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .service_card i {
+        font-size: 30px;
+    }
+
+    .service_card h2 {
+        font-size: 20px;
+    }
+
+    .service_card p {
+        font-size: 13px;
+    }
+
+    .service_card a {
+        font-size: 13px;
+    }
+}
+
+/* ------------ CONTACT SECTION ------------ */
+
+.form {
+  width: 100%;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form h1 {
+  text-align: center;
+  color: black;
+  font-size: 48px;
+  margin-bottom: 40px;
+  /* margin-top: -40px; */
+}
+
+.form h1 span {
+  color: darkviolet;
+}
+
+/* FORM BOX */
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS & TEXTAREA */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: lightgray;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* BUTTON */
+.form .form_btn {
+  padding: 15px;
+  width: 200px;
+  margin: 20px auto 0;
+  font-size: 20px;
+  background-color: darkviolet;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px darkviolet;
+  cursor: pointer;
+  transition: 0.3s;
+  color: black;
+}
+
+.form .form_btn:hover {
+  background: transparent;
+  border: 2px solid darkviolet;
+  color: black;
+}
+
+/* ------------ RESPONSIVE ------------ */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  .form h1 {
+    font-size: 38px;
+  }
+
+  form {
+    max-width: 500px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .form {
+    padding: 80px 15px;
+  }
+
+  .form h1 {
+    font-size: 28px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form .form_btn {
+    width: 120px;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Small Phones */
+@media screen and (max-width: 400px) {
+  .form h1 {
+    font-size: 24px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form .form_btn {
+    width: 100px;
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+

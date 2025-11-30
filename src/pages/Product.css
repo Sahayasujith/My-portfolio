@@ -1,0 +1,131 @@
+/* PAGE WRAPPER */
+.product-page {
+    width: 100%;
+    padding: 60px 0;
+    background: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* TITLE */
+.product-title {
+    font-size: 45px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #222;
+}
+
+.product-title span {
+    color: darkviolet;
+}
+
+/* GRID */
+.product-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: lightgray;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CARD HOVER */
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* IMAGE STYLE */
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.07);
+}
+
+/* TITLE */
+.product-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+/* DESCRIPTION */
+.product-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* BUTTON */
+.product-card a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: darkviolet;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.product-card a:hover {
+    background: transparent;
+    border: 2px solid darkviolet;
+    color: darkviolet;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title {
+        font-size: 28px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-card h2 {
+        font-size: 18px;
+    }
+
+    .product-card p {
+        font-size: 13px;
+    }
+
+    .product-card a {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}

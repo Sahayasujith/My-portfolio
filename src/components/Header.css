@@ -1,0 +1,204 @@
+/* ------------ RESET ------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------ HEADER ------------ */
+.header {
+  width: 100%;
+  background: lightgray;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: darkviolet;
+}
+
+/* ------------ NAVIGATION (Desktop) ------------ */
+.nav {
+  display: flex;
+  gap: 25px;
+  background-color: darkgray;
+  width: 480px;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 8px 10px;
+}
+
+.nav a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s ease;
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+.nav a:hover {
+  color: darkviolet;
+  font-weight: bold;
+}
+
+/* Click animation */
+.nav a:active {
+  transform: scale(0.85);
+}
+
+.nav a:active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: orangered;
+  opacity: 0.7;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: ripple 0.45s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(22);
+    opacity: 0;
+  }
+}
+
+/* ------------ HAMBURGER ------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: black;
+  transition: 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ------------ MOBILE RESPONSIVE ------------ */
+@media (max-width: 992px) {
+  .nav {
+    width: 350px;
+    gap: 18px;
+  }
+  .nav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    width: 220px;
+    background: lightgray;
+    flex-direction: column;
+    padding: 20px;
+    gap: 18px;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    right: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Smaller Phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+  .nav {
+    width: 180px;
+    padding: 15px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 20px;
+  }
+  .hamburger span {
+    width: 24px;
+  }
+  .nav {
+    width: 160px;
+  }
+}
+
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background-color: lightgray;
+  padding: 20px 0;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.footer i {
+  margin-right: 8px;
+  color: darkviolet;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .footer {
+    font-size: 14px;
+    padding: 15px 0;
+  }
+
+  .footer i {
+    font-size: 16px;
+  }
+}
