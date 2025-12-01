@@ -61,8 +61,8 @@ function Product() {
                 </div>
                 ))}
             </div>
-            <Footer/>
         </div>
+        <Footer/>
     </div>
   );
 }

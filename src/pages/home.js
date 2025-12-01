@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css"; // make sure you create this file
 import Header from "../components/header";
 import Footer from "../components/Footer";
@@ -61,8 +62,8 @@ export default function Home() {
         <div class="about_section">
             <h1>About <span>Me</span></h1>
             <h2>Web <span>Developer!</span></h2>
-            <p>I'm Sahayasujith Full-Stack Developer, I enjoy taking complex problem and turning them into simple and beautiful interface design. I also love the logic and structure of coding and always strive to write elegent and efficent code whether it be HTML,CSS or JavaScript.</p><br/>
-            <button class="about_btn" onclick="aboutmark()">Read More...</button>
+            <p>I'm Sahayasujith Full-Stack Developer, I enjoy taking complex problem and turning them into simple and beautiful interface design. I also love the logic and structure of coding and always strive to write elegent and efficent code whether it be HTML,CSS or JavaScript.</p><br/><br/>
+            <Link to="/about" class="about_btn" onclick="aboutmark()" style={{textDecoration:'none'}}>Read More...</Link>
         </div>
         <div class="about_photo">
             <img src="SUJITH.jpg" alt="image" width="420px" height="360px"/>
