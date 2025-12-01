@@ -13,7 +13,7 @@ const Header = () => {
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
         <Link to="/project" onClick={() => setMenuOpen(false)}>Project</Link>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
 
       {/* Hamburger Icon */}

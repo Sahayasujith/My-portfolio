@@ -38,6 +38,7 @@ function About(){
                     <div className="about-content"><img src="https://i.pinimg.com/1200x/ed/66/63/ed666327dd3ce274d94f2b3547155891.jpg" /><p>Python</p></div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
